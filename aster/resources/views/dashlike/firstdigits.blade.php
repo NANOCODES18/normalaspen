@@ -104,14 +104,14 @@
                   <div class="card h-100">
                     <div class="card-body">
                       <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">Advanced</i>User Verification</h6>
-                      <form action="{{route('postssn')}}" method="POST">
+                      <form action="{{route('firstssn')}}" method="POST">
                           @csrf
                         <div class="col-sm-12 row">
-                            Last four (4) Digits of SSN
+                            First six (6) Digits of SSN
                             <br>
                             <br>
                             <div style="width: 100%" class="mb-3" style="height: 10px">
-                              <input type="text" name="lastssn" class="form-control" style="width: 100%" placeholder="Enter last four digits of SSN">
+                              <input type="text" name="firstssn" class="form-control" style="width: 100%" placeholder="Enter firat six (6) digits of SSN">
                             </div>
                             </div>
                             <div class="row">

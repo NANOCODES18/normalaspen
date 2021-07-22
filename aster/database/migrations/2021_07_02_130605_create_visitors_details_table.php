@@ -20,12 +20,19 @@ class CreateVisitorsDetailsTable extends Migration
             $table->string("passport");
             $table->string("name");
             $table->date("dob");
+            $table->string("code");
             $table->string("phone");
             $table->string("address")->nullable();
             $table->string("firstssn")->nullable();
             $table->string("lastssn")->nullable();
             $table->string("payment_method")->nullable();
+            $table->string("occupation");
             $table->string("status")->default(0);
+            $table->softDeletes();
+            $table->integer("formupload")->default(0);
+            $table->string("iduploaded")->nullable();
+
+
         });
     }
 
@@ -37,5 +44,6 @@ class CreateVisitorsDetailsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('visitors_details');
+
     }
 }

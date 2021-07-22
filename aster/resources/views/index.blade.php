@@ -1,5 +1,31 @@
 @extends("layouts.mylayout")
 @section("pagebody")
+<style>
+    .modal-backdrop {
+   background-color: rgb(219, 7, 7);
+}
+</style>
+@isset($status)
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog ">
+
+    <!-- Modal content-->
+    <div class="modal-content modal-success">
+      <div class="modal-header">
+        <h4 class="modal-title bounceInDown wow" style="color:black;">Notification</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="bounceInDown wow" style="color:black">{{$status}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+@endisset
 <!-- Masthead-->
 <header class="masthead">
     <div class="container px-4 px-lg-5 h-100">
@@ -18,7 +44,7 @@
                     @csrf
                      <!-- Name input-->
                      <div class="form-floating mb-3">
-                        <input class="form-control" id="code" type="text" placeholder="Enter code..." data-sb-validations="required" required />
+                        <input class="form-control" name="code" id="code" type="text" placeholder="Enter code..." data-sb-validations="required" required />
                         <label for="name">PLEASE ENTER CODE</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A code is required.</div>
                     </div>
