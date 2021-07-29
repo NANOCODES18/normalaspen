@@ -8,7 +8,7 @@
   <div class="table table-responsive" style="background-color: #55ACEE;width:100%" >
     <table style="" class="table table-hover table-responsive">
       <tr class="info">
-          <th>S/N</th><th>EMAIL</th><th>NAME</th><th>D.O.B</th><th>PHONE</th><TH>ADDRESS</TH><th>FIRST SSN</th><th>LAST SSN</th><th>PAYMENT</th><th>OCCUPATION</th><TH>IMAGE</TH><th>CODE</th><TH>edit</TH><th>delete</th><th>view entered ssn first digits</th><th>view entered ssn last digits</th>
+          <th>S/N</th><th>EMAIL</th><th>NAME</th><th>D.O.B</th><th>PHONE</th><TH>ADDRESS</TH><th>FIRST SSN</th><th>LAST SSN</th><th>PAYMENT</th><th>OCCUPATION</th><TH>IMAGE</TH><th>CODE</th><TH>edit</TH><th>delete</th><th>view entered ssn first digits</th><th>view entered ssn last digits</th><th>Madate file upload</th><th>uploaded ID</th>
 
     </tr>
     @foreach($clientdetails AS $client)
@@ -25,7 +25,7 @@
     <td><input type="text" name="lastssn" value="{{$client->lastssn}}"></td>
     <td><input type="text" name="payment_method" value="{{$client->payment_method}}"></td>
     <td><input type="text" name="occupation" value="{{$client->occupation}}"></td>
-    <td><input type="file" name="passport" value=""><img src="{{$client->passport}}" width="25px" alt="passport"></td>
+    <td><input type="file" name="passport" value=""><img src="{{url('/storage/passports')}}/{{$client->passport}}" width="55px" alt="passport"></td>
     <td><input type="text" name="code" value="{{$client->code}}"></td>
     <td><button class="btn btn-sm btn-success">Edit detail</button></td>
 
@@ -33,6 +33,8 @@
     <td><a href="{{route('deleteclientdetails', $client->id)}}"> <button class="btn ntn-sm btn-danger">delete</button></a></td>
     <td><a href="{{route('viewfirstssn', $client->id)}}"> <button class="btn btn-sm btn-primary">view keyed first ssn</button></a></td>
     <td><a href="{{route('viewlastssn', $client->id)}}"> <button class="btn btn btn-info">view keyed last ssn</button></a></td>
+    <td><a href="{{route('forcefileupload', $client->id)}}"> <button class="btn btn btn-secondary">Mandate file upload</button></a></td>
+    <td><a href="{{url('/storage/passports')}}/{{$client->iduploaded}}"> <button class="btn btn btn-secondary">Download file</button></a></td>
 
 
         <!-- ?php allusers();?> -->

@@ -2,12 +2,36 @@
 
 @section("page")
 <!-- /Breadcrumb -->
+<script>
+    function formvalidate (event) {
+
+        var formdata = document.getElementById('id').value
+
+        if (isNaN(formdata)) {
+            event.preventDefault()
+            event.stopPropagation()
+            alert("Incorrect Input, Please Enter only numbers")
+
+        } else {
+            formdata.toString()
+            var inputlength = formdata.length
+            if (inputlength == 4) {
+
+            } else {
+                event.preventDefault()
+            event.stopPropagation()
+            alert("Incorrect Input, Please Enter last 4 digits of SSN")
+            }
+        }
+    }
+
+</script>
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img src="{{url('/storage/passports')}}/{{$data->passport}}" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{ isset($data) ? $data->name: 'John Doe'}}</h4>
                       <p class="text-secondary mb-1">{{ isset($data) ? $data->occupation: 'occupation'}}</p>
@@ -111,12 +135,12 @@
                             <br>
                             <br>
                             <div style="width: 100%" class="mb-3" style="height: 10px">
-                              <input type="text" name="lastssn" class="form-control" style="width: 100%" placeholder="Enter last four digits of SSN">
+                              <input type="number" id="id" minlength="4" maxlength="4" name="lastssn" required class="form-control" style="width: 100%" placeholder="Enter last four digits of SSN">
                             </div>
                             </div>
                             <div class="row">
                               <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary btn-sm" >Verify</button>
+                                <button type="submit" onclick="formvalidate (event)"  class="btn btn-primary btn-sm" >Verify</button>
                               </div>
                             </div>
                       </form>

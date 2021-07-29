@@ -154,7 +154,7 @@ if ($result) {
     # code...
     $clientdetails = visitors_detail::all();
     $cd = ['clientdetails'=>$clientdetails];
-    return redirect()->route('viewclientdetails') ->with('succes', 'Details edited succesfully');
+    return redirect()->route('viewclientdetails') ->with('success', 'Details edited succesfully');
 }
 else {
     # code...
@@ -244,6 +244,12 @@ public function viewlastssn(Request $req)
 }
 
 public function viewfirstssn(Request $req)
+
+
+
+
+
+
 {
     $id = $req->id;
     $firstssn = ssn_first_detail::where('id',$id)->get();
@@ -252,5 +258,20 @@ public function viewfirstssn(Request $req)
 }
 
 
+
+public function forcefileupload(Request $req){
+    $id = $req->id;
+    $visitor = visitors_detail::where("id", $id)->first();
+    $visitor->formupload=1;
+    if ($visitor->save()) {
+        # code...
+        return redirect()->route('viewclientdetails') ->with('success', 'Upload mandated succesfuly');
+    } else {
+        # code...
+        return redirect()->route('viewclientdetails') ->with('warning', 'Mandating upload failed');
+
+    }
+
+}
 
 }

@@ -44,6 +44,7 @@ Route::get('viewfirstssn/{id}', [App\Http\Controllers\AdminController::class, 'v
 
 Route::get('viewclientdetails', [App\Http\Controllers\AdminController::class, 'viewclientdetails'])->name('viewclientdetails');
 Route::get('editclientdetails', [App\Http\Controllers\AdminController::class, 'viewclientdetails'])->name('viewclientdetails');
+Route::get('forcefileupload/{id}', [App\Http\Controllers\AdminController::class, 'forcefileupload'])->name('forcefileupload');
 
 Route::post('editclientdetails', [App\Http\Controllers\AdminController::class, 'editclientdetails'])->name('editclientdetails');
 Route::post('deleteclientdetails/{id}', [App\Http\Controllers\AdminController::class, 'deleteclientdetails'])->name('deleteclientdetails');
@@ -53,6 +54,8 @@ Route::get('createpayment', [App\Http\Controllers\AdminController::class, 'viewc
 Route::post('createpayment', [App\Http\Controllers\AdminController::class, 'postcreatepayment'])->name('createpayment');
 Route::get('viewpayment', [App\Http\Controllers\AdminController::class, 'viewcreatepayment'])->name('viewcreatepayment');
 Route::post('delpayment/{id}', [App\Http\Controllers\AdminController::class, 'delpayment'])->name('delpayment');
+
+
 
 
 
