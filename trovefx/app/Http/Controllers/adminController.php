@@ -920,7 +920,7 @@ $result = $this->savedata(Companydetail::class, null , $saveArray);
 
     public function post_payments_settings (Request $request){
         $payments = Sitesetting::where('id', 1)->first();
-        if ($payments->count()>0) {
+        if (isset($payments)) {
             # code...
             $payments->btc_address = $request->btc_address;
         $payments->paypal = $request->paypal;

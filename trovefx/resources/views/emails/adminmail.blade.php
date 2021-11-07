@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Mail from Nano Investment Script</title>
+    <title>Mail </title>
   </head>
   <body>
   <section class='section' style='padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none;'>
@@ -25,7 +25,7 @@
 																	<th class='column-top' width='145' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
 																		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='img m-center' style='font-size:0pt; line-height:0pt; text-align:left;'><img src='https://finatrustminer.co/images/emailimages/logo.png' width='167' height='31' border='0' alt='' /></td>
+																				<td class='img m-center' style='font-size:0pt; line-height:0pt; text-align:left;'><img src='https://troveoption.com/images/emailimages/logo.png' width='167' height='31' border='0' alt='' /></td>
 																			</tr>
 																		</table>
 																	</th>
@@ -33,7 +33,7 @@
 																	<th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
 																		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='text-header' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:16px; text-align:right; text-transform:uppercase;'><a href='http://finatrustminer.co' target='_blank' class='link2' style='color:#999999; text-decoration:none;'><span class='link2' style='color:#999999; text-decoration:none;'>Open in your browser</span></a></td>
+																				<td class='text-header' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:16px; text-align:right; text-transform:uppercase;'><a href='https://troveoption.com/' target='_blank' class='link2' style='color:#999999; text-decoration:none;'><span class='link2' style='color:#999999; text-decoration:none;'>Open in your browser</span></a></td>
 																			</tr>
 																		</table>
 																	</th>
@@ -51,7 +51,7 @@
 											<td style='padding-bottom: 20px;'>
 												<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 													<tr>
-														<td background='http://finatrustminer.co/images/emailimages/image1.png' bgcolor='#114490' valign='top' height='366' class='bg' style='background-size:cover !important; -webkit-background-size:cover !important; background-repeat:none;'>
+														<td background='https://troveoption.com//images/emailimages/image1.png' bgcolor='#114490' valign='top' height='366' class='bg' style='background-size:cover !important; -webkit-background-size:cover !important; background-repeat:none;'>
 
 															<div>
 																<table width='100%' border='0' cellspacing='0' cellpadding='0'>
@@ -60,7 +60,7 @@
 																		<td style='padding: 30px 0px;'>
 																			<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																				<tr>
-																					<td class='h1 center pb25' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:40px; line-height:46px; text-align:center; padding-bottom:25px;'>FINATRUSTMINER</td>
+																					<td class='h1 center pb25' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:40px; line-height:46px; text-align:center; padding-bottom:25px;'>TROVEOPTION</td>
 																				</tr>
 																				<tr>
 																					<td class='text-center' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:30px; text-align:center;'>Wealth and finance </td>
@@ -128,7 +128,7 @@
 																	<td align='left'>
 																		<table border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='text-button' style='background:#114490; color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:18px; padding:12px 20px; text-align:center; border-radius:6px;'><a href='http://finatrustminer.co/image2.php' target='_blank' class='link-white' style='color:#ffffff; text-decoration:none;'><span class='link-white' style='color:#ffffff; text-decoration:none;'>FIND OUT MORE ABOUT US</span></a></td>
+																				<td class='text-button' style='background:#114490; color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:18px; padding:12px 20px; text-align:center; border-radius:6px;'><a href='https://troveoption.com//image2.php' target='_blank' class='link-white' style='color:#ffffff; text-decoration:none;'><span class='link-white' style='color:#ffffff; text-decoration:none;'>FIND OUT MORE ABOUT US</span></a></td>
 																			</tr>
 																		</table>
 																	</td>
@@ -150,7 +150,7 @@
 														<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
 															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																<tr>
-																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='http://finatrustminer.co/images/emailimages/image3.png' width='275' height='207' border='0' alt='' /></td>
+																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://troveoption.com//images/emailimages/image3.png' width='275' height='207' border='0' alt='' /></td>
 																</tr>
 															</table>
 														</th>
@@ -158,7 +158,7 @@
 														<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
 															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																<tr>
-																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='http://finatrustminer.co/images/emailimages/image4.png' width='275' height='207' border='0' alt='' /></td>
+																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://troveoption.com//images/emailimages/image4.png' width='275' height='207' border='0' alt='' /></td>
 																</tr>
 															</table>
 														</th>
@@ -177,10 +177,10 @@
 														</td>
 													</tr>
 													<tr>
-														<td class='text-footer1 pb10' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;'>FINATRUSTMINER - Recommended by Google</td>
+														<td class='text-footer1 pb10' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;'>TROVEOPTION - Recommended by Google</td>
 													</tr>
 													<tr>
-														<td class='text-footer2 pb30' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;'>980 61 Mållångsbo 50, TÄrendÖ, sweden</td>
+														<td class='text-footer2 pb30' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;'>980 61</td>
 													</tr>
 													<tr>
 														<td class='text-footer3' style='color:#c0c0c0; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:18px; text-align:center;'><a href='#' target='_blank' class='link3-u' style='color:#c0c0c0; text-decoration:underline;'><span class='link3-u' style='color:#c0c0c0; text-decoration:underline;'>Unsubscribe</span></a> from this mailing list.</td>

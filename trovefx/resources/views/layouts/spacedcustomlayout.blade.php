@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/custom.css"/>
 <!--js-->
-<script type="text/javascript" src="js/jquery.js"></script>;/
+<script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/clipboard.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/currency.js"></script>
@@ -21,7 +21,7 @@
 
 
 
-<link rel="icon" type="image/png" href="images/favicon.html">
+<link rel="icon" type="image/png" href="{{asset('images/emailimages/Troveoptiom.png')}}">
 </head>
 <body>
 <header class="home-header">
@@ -29,6 +29,8 @@
 	  <div class="container clearfix">
         <div class="logo">
 
+           <a href="{{route('index')}}"> <img src="{{asset('images/emailimages/Troveoptiom.png')}}" width="200px" alt="">
+           </a>
 	    </div>
 	    <div class="theader-right">
 	     <!--user buttons-->
@@ -145,9 +147,21 @@
                         <p class="copyrights">&copy; 2021 Trove Option. All rights reserved.</p>
                         </div>
                     </div>
+                    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/618586f26bb0760a49415656/1fjopeb1b';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
     </footer>
 
     </body>
 
-    <!-- Mirrored from Trove Option/?a=faq by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 14:31:46 GMT -->
-    </html>
+  </html>

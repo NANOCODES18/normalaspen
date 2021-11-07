@@ -1,5 +1,4 @@
 @extends("layouts.spacedcustomlayout")
-
 @section("body")
 <div class="logoslider">
     <div id="particles-js"></div>
@@ -10,15 +9,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="banner-text">
-
                         <h1>Trove Option</h1>
                         <h1>Achieve your goals with long-term success through earning consistent Returns</h1>
-                        <p>Trove Option offers highly profitable online plans. Participating in our project by depositing for a plan, will make your dream come true. Earn highly profitable returns with very much fast process. Our team will provide you stability and safety of this process. Get registered and begin to earn right now!</p> <a class="btn btn-blue" href='{{route("about")}}'>Know More <i class="fas fa-long-arrow-alt-right"></i></a> </div>
+                        <p>Trove Option offers highly profitable online plans. Participating in our project by depositing for
+                             a plan, will make your dream come true. Earn highly profitable returns with very much fast process. Our team
+                            will provide you stability and safety of this process. Get registered and begin to earn right
+                             now!</p> <a class="btn btn-blue" href='{{route("about")}}'>Know More <i class="fas fa-long-arrow-alt-right"></i></a> </div>
                 </div>
                 <div class="col-md-6">
                     <script type="text/javascript" src="js/lottie.js"></script>
                     <div id="lottie"></div>
-
                 </div>
             </div>
         </div>
@@ -28,7 +28,6 @@
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
 <div class="tradingview-widget-container__widget"></div>
-
 <script type="text/javascript" src="../s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
 {
 "symbols": [
@@ -403,15 +402,9 @@
 <div class="latestContainer">
     <div class="latestInner">
         <div class="latest-row latest-row1">
-
-
-
         </div>
 
         <div class="latest-row latest-row3">
-
-
-
         </div>
     </div>
 </div>
