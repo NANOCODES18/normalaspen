@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Fund;
+use App\Models\Referral;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -76,7 +77,21 @@ class RegisterController extends Controller
         $finance_add= new Fund();
         $finance_add->userid = $newuser->id;
         $finance_add->save();
-        $newuser->attachRole('Superadministrator');
+        $newuser->attachRole('User');
+
+        if (isset($data['refid'])) {
+            # code...
+$newref = new Referral();
+$newref ->oldusernamename = "nousername";
+$newref ->newuser = $newuser->id;
+$newref ->olduseremail = $data['refid'];
+$newref ->olduseruserid = $data['refid'];
+$newref->save();
+
+        } else {
+            # code...
+        }
+
 
         return $newuser;
     }

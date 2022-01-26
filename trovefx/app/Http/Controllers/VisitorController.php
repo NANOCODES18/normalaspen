@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Companydetail;
 use App\Models\Investmentplan;
+use App\Models\referralpercent;
 use App\Models\Faq;
 
 class VisitorController extends Controller
@@ -14,6 +15,7 @@ class VisitorController extends Controller
     {
         # code...
         $inv_plans = Investmentplan::all();
+        $ref = referralpercent::where('id', 1)->first();
         $faqs = Faq::all();
         $company_detail = Companydetail::where('id', 1)->first();
         $data=[];
@@ -22,6 +24,8 @@ class VisitorController extends Controller
         $data['investmentplans'] = $inv_plans;
         $data['faqs'] = $faqs;
         $data['title']="Home";
+        $data['ref']=$ref;
+        
         return view ("visitors.index", $data);
     }
 

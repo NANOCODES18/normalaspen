@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <input type="text" hidden name="refid" value="@php if(isset($_GET['refid'])) { echo $_GET['refid'];} @endphp"  id="">
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -45,6 +46,16 @@
                                 <input id="phone" type="phone" class="form-control" name="phone" required autocomplete="phone">
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                            <label for="Country" class="col-md-4 col-form-label text-md-right">Country</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="text" class="form-control" name="country"  autocomplete="country">
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

@@ -281,7 +281,7 @@
                                     <a href="{{ route("payments_settings") }}">Payments</a>
                                 </li>
                                 <li>
-                                    <a href="forget-pass.html">Users</a>
+                                    <a href="{{route('refsetting')}}">Referral Percent</a>
                                 </li>
                             </ul>
                         </li>

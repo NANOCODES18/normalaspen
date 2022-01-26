@@ -179,6 +179,67 @@
     <!--end video-->
 </div>
 <!--End middle home-->
+
+
+
+
+
+
+
+
+
+<!--start how it-->
+
+<div class="how-it">
+    <div class="container">
+        <div class="section-title text-center">
+            <h4>Why chose us</h4>
+            <h2>WHY TROVE OPTION</h2> </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="std text-center">
+                    <p>We are dedicated to providing exquisite services to our clients. <br>
+                        <p>
+                        Stocks are the growth engines of your portfolio.The investment opportunities you’re after could lie anywhere. Whether you’re investing in a single company’s stock or creating a portfolio of diversified equities.
+                    </p>
+                       Our clients trust us with our industry-leading investment advice and execution expertise.
+                       <p> Our Equities Trading Desk manages over $450 billion in stock transactions and more than 21 million trade orders every year.
+                        Once you’ve bought your investment you can log in anytime to monitor it and check the latest news and announcements. </p> There’s no limit on how long you can hold your investment, and when you’re ready to sell simply login and click to sell instantly. You could then use that cash to make a new investment or return it to your bank account.
+                       In trove option,Investors use information including company news and announcements, company results (earnings), and technical analysis to make decisions about which stocks to buy and when.</p>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-list row">
+            <div class="col-md-6">
+                <div class="how-box"> 
+                    <h3>WHAT WE OFFER </h3>
+                    <p>Our platform helps you expand your investing horizons and strategies. A coordinated team combining our distinct market insights with rigorous fundamental analysis. <p>
+                        Our main goal is to produce the preservation and increase of own capital and capital of our investors by wise mercantilism within the quality market with risk hedging. Small finance is a chance for many normal investors to save lots of and greatly multiply their capital and to produce himself and his family a good, snug future and appearance into it not with concern, however with anticipation of abundance.</p>
+                        
+                         We tend to give everybody the chance to become an associate capitalist and make your own extremely profitable quality. Be our customer and enjoy one of the best investment opportunities, Join us today! </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="how-box"> 
+                    <h3>Assets Managemnt</h3>
+                    <p>Trove option is a major international firm asset management with well established firms within the region USA, Asia, pacific, and Europe. <p> We tend to believe that has intensive expertise to produce dependable and consistent investment method across our capabilities. Experience supported native information and skill of our team and partners.</p> <p>
+                        Our practiced team invests within the certified and controlled investment method. </p> Our common goal is to provide future monetary advantages, while not exposing the client's capital to excessive risk. The careful analysis goes into every investment selection, that permits the united states to get financial gain within the quantity of unlimited.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!--end how it-->
+
+
+
+
+
+
+
+
 <!--start investment plans-->
 <div class="investment-container">
     <div class="container">
@@ -252,18 +313,19 @@
                         <div class="homerefboxico">
                             <img src="images/refl1.png" alt="">
                         </div>
-                        7.00%
+                        {{$ref ? $ref->firstref :'Not set'}}%
                         <div class="homerefboxtxt">Level 1</div>
                     </div>
                     <div class="homerefbox2">
                         <div class="homerefboxico">
                             <img src="images/refl2.png" alt="">
                         </div>
-                        5.00%
+                        {{$ref ? $ref->secondref :'Not set'}}%
                         <div class="homerefboxtxt">Level 2</div>
                     </div>
                     <div class="homerefbox3">
-                        <div class="homerefboxico"> <img src="images/refl3.png" alt=""> </div> 3.00%
+                        <div class="homerefboxico"> <img src="images/refl3.png" alt="">
+                         </div> {{$ref ? $ref->thirdref :'Not set'}}%
                         <div class="homerefboxtxt">Level 3</div>
                     </div>
                 </div>
@@ -275,12 +337,10 @@
 </div>
 
 <!--end affiliate-->
-<h2 class="_seg____header__" style="margin-top: 50px;"><center>GET UPDATED WITH CRYPTOs</center></h2>
 
-<center>
 
-    <div style="height:433px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=light&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io/" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a></div></div>
-</center>
+
+
 <!--start how it-->
 
 <div class="how-it">

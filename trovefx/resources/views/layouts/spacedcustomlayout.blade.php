@@ -6,18 +6,19 @@
 <meta name="viewport" content="width=1368">
 <title>Trove Option : {{$title}}</title>
 
-<link rel="stylesheet" href="../use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="css/animate.css" />
-<link rel="stylesheet" type="text/css" href="css/flaticon.css" />
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+<link rel="stylesheet" href="use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/flaticon.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}"/>
 <!--js-->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/clipboard.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/currency.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/clipboard.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/currency.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/functions.js')}}"></script>
+
 
 
 
@@ -85,6 +86,8 @@
 	</div>
 	<!--end bottom header-->
 </header>
+
+@include("flash-message")
 
     @yield("body")
 

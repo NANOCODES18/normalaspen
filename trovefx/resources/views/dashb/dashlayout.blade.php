@@ -174,7 +174,7 @@
 		 <div class="ulogo">
 			 <a href="index.html">
 			  <!-- logo for regular state and mobile devices -->
-			  <span><b>User </b></span>
+			  <span><b> Trove Option </b></span>
 			</a>
 		</div>
         <div class="image">
@@ -185,7 +185,7 @@
           @endif " class="rounded-circle" alt="User Image">
         </div>
         <div class="info">
-          <p>User dashboard</p>
+          <p>{{Auth::user()->name}}</p>
 			<a href="{{route('userdashb_profile')}}" class="link" data-toggle="tooltip" title="" data-original-title="Settings"><i class="ion ion-gear-b"></i></a>
             <a href="{{route('userdashb_message')}}" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ion ion-android-mail"></i></a>
             <a href="{{route('logout')}}" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ion ion-power"></i></a>
@@ -282,21 +282,7 @@
 
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="ion ion-person"></i>
-            <span>My Profile</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{route('userdashb_profile')}}">view profile</a></li>
-            <li><a href="{{route('userdashb_wallet_address')}}">my wallet address</a></li>
-            <li><a href="{{route('userdashb_message')}}">my messages</a></li>
-            <li><a href="{{route('userdashb_notification')}}">my notifications</a></li>
-          </ul>
-        </li>
+        
 
         <li class="treeview">
           <a href="#">

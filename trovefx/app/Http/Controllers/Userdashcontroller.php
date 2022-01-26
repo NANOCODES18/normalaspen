@@ -260,7 +260,7 @@ class Userdashcontroller extends Controller
                 $raw_profit = $amount * $plan_from_db->percentage;
                 $profit = $raw_profit/100;
                 $total_profit=$profit + $amount;
-                $mature_date= Carbon::now()->addDays(7 * (int)$duration);
+                $mature_date= Carbon::now()->addDays(1 * (int)$duration);
                 $new_bal = $user_fund->balance - $amount;
                 $new_trading_balance = $user_fund->currentinvestment + $amount;
                 $saveArray = [
@@ -416,7 +416,7 @@ class Userdashcontroller extends Controller
 
         Mail::to($email)->send(new Adminmail($emaildata));
             $message = "please make a deposit of $deposit_amount to the $method account $methacc within the next 5hrs";
-            return redirect()->route('userdashb_deposit')->with('succes',$message);
+            return redirect()->route('userdashb_deposit')->with('success',$message);
         } else {
             # code...
             return redirect()->route('userdashb_deposit')->with('error','deposit request failed, please try again');

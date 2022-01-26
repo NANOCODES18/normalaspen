@@ -58,11 +58,8 @@
                     <div class="form-group">
                         <label>Select Duration</label>
                         <select name="duration" class="form-control">
-                          <option value="1">1 Week</option>
-                          <option value="2">2 Weeks</option>
-                          <option value="3">3 Weeks</option>
-                          <option value="4">4 Weeks</option>
-                          <option value="5">5 Weeks</option>
+                          <option value="{{$plan->duration}}">{{$plan->duration}} days</option>
+                          
                         </select>
                       </div>
                   </p>

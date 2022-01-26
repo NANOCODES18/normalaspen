@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 use App\Models\Newspost;
 use App\Models\Sitesetting;
 use App\Mail\Adminmail;
+use App\Models\referralpercent;
 
 use PhpParser\Node\Stmt\Foreach_;
 
@@ -946,13 +947,55 @@ $result = $this->savedata(Companydetail::class, null , $saveArray);
             return redirect()->route('payments_settings')->with('error', 'payments settings update failed');
         }
         }
-
-
-
-
-
-
     }
+
+
+
+
+
+
+        public function refsetting (){
+            $referral = referralpercent::where('id', 1)->first();
+            $data=[];
+            $data['referral'] = $referral;
+            return view('admin.refsetting', $data);
+        }
+    
+        public function post_referral_setting (Request $request){
+            $referral = referralpercent::where('id', 1)->first();
+            if (isset($referral)) {
+                # code...
+                $referral->firstref = $request->firstref;
+            $referral->secondref = $request->secondref;
+            $referral->thirdref = $request->thirdref;
+            if ($referral->save()) {
+                # code...
+                return redirect()->route('refsetting')->with('success', 'referral settings updated succesfuly');
+            } else {
+                # code...
+                return redirect()->route('refsetting')->with('error', 'referral settings update failed');
+            }
+            } else {
+                # code...
+                $referral = new referralpercent();
+                $referral->firstref = $request->firstref;
+            $referral->secondref = $request->secondref;
+            $referral->thirdref = $request->thirdref;
+            if ($referral->save()) {
+                # code...
+                return redirect()->route('refsetting')->with('success', 'referral settings updated succesfuly');
+            } else {
+                # code...
+                return redirect()->route('refsetting')->with('error', 'referral settings update failed');
+            }
+            }
+
+        }
+
+
+
+
+    
 
 }
 

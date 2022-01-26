@@ -44,6 +44,9 @@ Route::get('/approvedwithdrawals', [App\Http\Controllers\adminController::class,
 Route::get('/approveddeposits', [App\Http\Controllers\adminController::class, 'approveddeposits'])->name('approveddeposits');
 Route::get('/pendingdeposits', [App\Http\Controllers\adminController::class, 'pendingdeposits'])->name('pendingdeposits');
 Route::get('/runninginvestments', [App\Http\Controllers\adminController::class, 'runninginvestments'])->name('runninginvestments');
+Route::post('/post_referral_setting', [App\Http\Controllers\adminController::class, 'post_referral_setting'])->name('post_referral_setting');
+Route::get('/refsetting', [App\Http\Controllers\adminController::class, 'refsetting'])->name('refsetting');
+
 
 // email and top earners routes
 

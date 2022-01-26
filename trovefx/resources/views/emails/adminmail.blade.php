@@ -118,10 +118,10 @@
 														<td class='p30-15' style='padding: 50px 30px;'>
 															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																<tr>
-																	<td class='h3 pb20' style='color:#114490; font-family:Noto Sans, Arial,sans-serif; font-size:24px; line-height:32px; text-align:left; padding-bottom:20px;'>{{$emaildata['email_header']}}</td>
+																	<td class='h3 pb20' style='color:#114490; font-family:Noto Sans, Arial,sans-serif; font-size:24px; line-height:32px; text-align:left; padding-bottom:20px;'>{{!! $emaildata['email_header'] !!}}</td>
 																</tr>
 																<tr>
-																	<td class='text pb20' style='color:#777777; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:26px; text-align:left; padding-bottom:20px;'>Sir <br>{{$emaildata['email_body']}}</td>
+																	<td class='text pb20' style='color:#777777; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:26px; text-align:left; padding-bottom:20px;'>Sir <br>{{!! $emaildata['email_body'] !!}}</td>
 																</tr>
 
 																<tr>
