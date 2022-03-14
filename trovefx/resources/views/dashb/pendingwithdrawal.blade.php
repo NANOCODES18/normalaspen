@@ -1,5 +1,99 @@
 @extends('dashb.dashlayout')
 @section('dashbody')
+
+        <!-- START CONTENT -->
+        <section id="main-content" class=" ">
+            <div class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">TRANSACTIONS</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <!-- MAIN CONTENT AREA STARTS -->
+
+                <div class="col-lg-12">
+                    <section class="box ">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">Pending Withdrawals</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="table-responsive" data-pattern="priority-columns">
+                                        <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>S/N</th>
+                                                    <th>Name</th>
+                                                    <th>Request Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Withdrawal Method</th>
+                                                    <th>Method Account</th>
+                                                    <th>Status</th>
+                                            </thead>
+                                            <tbody>
+                                                @if ($user_pending_withdrawal->count()>0)
+                                                @foreach ( $user_pending_withdrawal as $withdrawal)
+                                                <tr>
+                                                   <td class="text-center">{{$loop->index + 1}}</td>
+                                                   <td><a href="#" class="text-yellow hover-warning">{{Auth::user()->name }}</a></td>
+                                                   <td class="text-right"> {{Carbon\Carbon::parse($withdrawal->withdrawaltdate)->diffForHumans()}}</td>
+                                                   <td class="text-right"><span>$</span> {{$withdrawal->amount}}</td>
+                                                   <td class="text-right"> {{$withdrawal->method}}</td>
+                                                   <td class="text-right"> {{$withdrawal->methodaccount}}</td>
+
+                                                   <td class="text-right"><span class="label label-primary">Pending withdrawal</span></td>
+                                                </tr>
+                                                @endforeach
+
+                                                @else
+
+                                               <tr>
+                                                <td class="text-center" colspan="7">you have no pending withdrawal</td>
+
+                                             </tr>
+
+                                                @endif
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- MAIN CONTENT AREA ENDS -->
+
+            </div>
+        </section>
+        <!-- END CONTENT -->
+
+
+
+
+
+
+
+
+{{--
+
+
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -76,6 +170,6 @@
                 <!-- /.box -->
           </div>
         </div>
-      </section>
+      </section> --}}
 
 @endsection()

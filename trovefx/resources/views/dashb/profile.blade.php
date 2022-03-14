@@ -1,5 +1,398 @@
 @extends('dashb.dashlayout')
 @section('dashbody')
+        <!-- START CONTENT -->
+        <section id="main-content" class=" ">
+            <div class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">User Profile</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+
+                        <div class="pull-right hidden-xs">
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index-dashboard-2.html"><i class="fa fa-home"></i>Home</a>
+                                </li>
+                                <li class="active">
+                                    <strong>User Profile</strong>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- MAIN CONTENT AREA STARTS -->
+
+                <div class="col-lg-12">
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+
+                            <section class="box has-border-left-3">
+                                <div class="content-body">
+
+                                   <div class="uprofile-image mt-30">
+                                        <img alt="" src="{{asset('dashb/data/profile/user.png')}}" class="img-responsive">
+                                    </div>
+                                    <div class="uprofile-name">
+                                        <h3>
+                                            <a href="#">{{Auth::user()->name}}</a>
+                                            <!-- Available statuses: online, idle, busy, away and offline -->
+                                            <span class="uprofile-status online"></span>
+                                        </h3>
+                                        <p class="uprofile-title"> Trader</p>
+                                    </div>
+                                    <div class="uprofile-info">
+                                        <form action="" method="post" enctype="multipart/form-data">
+                                            <input type="file" name="photo" class="form-control" >
+                                            <button type="button" class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%"> Change Profile Photo </button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="col-lg-8 col-sm-8 col-xs-12">
+                            <section class="box has-border-left-3">
+
+                                <div class="content-body ">
+                                    <div class="row">
+
+                                        <div class="form-container">
+                                            <form action="{{route('userdashb_personal_detail')}}" method="POST">
+                                                @csrf
+
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+
+                                                        <div class="form-group no-mb">
+                                                            <!-- <label class="form-label">Name</label> -->
+                                                            <span class="desc"></span>
+
+                                                            <div class="input-group mb-10">
+                                                                <span class="input-group-addon">Name</span>
+                                                                <input type="text" class="form-control" name="name" type="text" value="{{Auth::user()->name}}" placeholder="{{Auth::user()->name}}">
+
+                                                            </div>
+
+                                                            <!-- <label class="form-label">Email Address</label> -->
+                                                            <span class="desc"></span>
+
+                                                            <div class="input-group mb-10">
+                                                                <span class="input-group-addon">Email Address</span>
+                                                                <input class="form-control" name='email' type="email" value="{{Auth::user()->email}}" placeholder="{{Auth::user()->email}}">
+
+                                                            </div>
+
+                                                            <!-- <label class="form-label">Phone Number</label> -->
+                                                            <span class="desc"></span>
+
+                                                            <div class="input-group mb-10">
+                                                                <span class="input-group-addon">Phone Number</span>
+                                                                <input class="form-control" name="phone" type="tel" value="{{Auth::user()->phone}}" placeholder="{{Auth::user()->phone}}">
+
+                                                            </div>
+
+                                                            <button type="submit" class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%"> Submit </button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="box box-solid bg-black">
+                                            <div class="box-header with-border">
+                                              <h3 class="box-title">Social media</h3>
+                                            </div>
+                                            <!-- /.box-header -->
+                                            <div class="box-body">
+                                              <div class="row">
+                                                <div class="col-12">
+                                                    <form action="{{route('userdashb_social_media')}}" method="POST">
+                                                      @csrf
+                                                    <div class="input-group mb-10">
+                                                      <label class="input-group-addon col-form-label">Facebook</label>
+                                                      <div class="col-sm-10">
+                                                        <input class="form-control" name="facebook" type="text" value="{{Auth::user()->facebook}}" placeholder="{{Auth::user()->facebook}}">
+                                                      </div>
+                                                    </div>
+                                                    <div class="input-group mb-10">
+                                                      <label class="input-group-addon col-form-label">Instagram</label>
+                                                      <div class="col-sm-10">
+                                                        <input class="form-control" name="instagram" type="text" value="{{Auth::user()->instagram}}" placeholder="{{Auth::user()->instagram}}">
+                                                      </div>
+                                                    </div>
+                                                    <div class="input-group mb-10">
+                                                      <span class="input-group-addon col-form-label">Twitter</span>
+                                                      <div class="col-sm-10">
+                                                        <input class="form-control" name="twitter" type="text" value="{{Auth::user()->twitter}}" placeholder="{{Auth::user()->twitter}}">
+                                                      </div>
+                                                    </div>
+                                                    <div class="input-group mb-10">
+                                                      <label class="input-group-addon col-form">Linkedin</label>
+                                                      <div class="col-sm-10">
+                                                        <input class="form-control" name="linkedin" type="text" value="{{Auth::user()->linkedin}}" placeholder="{{Auth::user()->linkedin}}">
+                                                      </div>
+                                                    </div>
+                                                    <div class="input-group mb-10">
+                                                      <label class="col-sm-2 col-form-label"></label>
+                                                      <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-yellow">Submit</button>
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                                <!-- /.col -->
+                                              </div>
+                                              <!-- /.row -->
+                                            </div>
+                                            <!-- /.box-body -->
+                                          </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                            <div class="box-content">
+                                <span class="row"> Change Password</span>
+                                <div class="box-body">
+                                  <form action="{{route('userdashb_password_reset')}}" method="post">
+                                      @csrf
+                                    <div class="form-group row">
+                                        <label class="col-12" for="login1-password">Password</label>
+                                        <div class="col-12">
+                                            <input type="password" class="form-control" id="login1-password" name="oldpassword" placeholder="Enter your password..">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12" for="lock1-password1">New Password</label>
+                                        <div class="col-12">
+                                            <input type="password" class="form-control" id="lock1-password1" name="newpassword" placeholder="Enter your new password..">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12" for="lock1-password1">Confirm New Password</label>
+                                        <div class="col-12">
+                                            <input type="password" class="form-control" id="lock1-password1" name="cnewpassword" placeholder="Renter your new password..">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mb-0">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-danger">
+                                                <i class="fa fa-arrow-right mr-5"></i> Change password
+                                            </button>
+                                        </div>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+{{--
+                <!-- MAIN CONTENT AREA ENDS -->
+            </div>
+        </section>
+        <!-- END CONTENT -->
+        <div class="page-chatapi hideit">
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+
+            <div class="chat-wrapper">
+
+                <h4 class="group-head">Favourites</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_1' data-user-id='1'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Joge Lucky</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_2' data-user-id='2'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Folisise Chosiel</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_3' data-user-id='3'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Aron Gonzalez</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <h4 class="group-head">More Contacts</h4>
+                <ul class="contact-list">
+
+                    <li class="user-row " id='chat_user_4' data-user-id='4'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Chris Fox</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_5' data-user-id='5'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Mogen Polish</a></h4>
+                            <span class="status offline" data-status="offline"> Offline</span>
+                        </div>
+                        <div class="user-status offline">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_6' data-user-id='6'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Smith Carter</a></h4>
+                            <span class="status available" data-status="available"> Available</span>
+                        </div>
+                        <div class="user-status available">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_7' data-user-id='7'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Amilia Gozenal</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_8' data-user-id='8'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-3.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Tahir Jemyship</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_9' data-user-id='9'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-4.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Johanson Wright</a></h4>
+                            <span class="status busy" data-status="busy"> Busy</span>
+                        </div>
+                        <div class="user-status busy">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_10' data-user-id='10'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-5.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Loni Tindall</a></h4>
+                            <span class="status away" data-status="away"> Away</span>
+                        </div>
+                        <div class="user-status away">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_11' data-user-id='11'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-1.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Natcho Herlaey</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+                    <li class="user-row " id='chat_user_12' data-user-id='12'>
+                        <div class="user-img">
+                            <a href="#"><img src="../data/profile/avatar-2.png" alt=""></a>
+                        </div>
+                        <div class="user-info">
+                            <h4><a href="#">Shakira Swedan</a></h4>
+                            <span class="status idle" data-status="idle"> Idle</span>
+                        </div>
+                        <div class="user-status idle">
+                            <i class="fa fa-circle"></i>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
     .profile_link{
         color: black !important;
@@ -178,12 +571,6 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Referral Link</label>
-                    <div class="col-sm-10">
-                      <input disabled style="color: black" readonly class="form-control" name="" type="text" value="http://troveoption.com/register/?refid={{Auth::user()->id}}">
-                    </div>
-                  </div>
-                  <div class="form-group row">
                     <label class="col-sm-2 col-form-label"></label>
                     <div class="col-sm-10">
                       <button type="submit" class="btn btn-yellow">Submit</button>
@@ -254,6 +641,6 @@
     <!-- /.row -->
 
   </section>
-  <!-- /.content -->
+  <!-- /.content --> --}}
 
 @endsection()
